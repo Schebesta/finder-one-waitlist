@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finder One — The Waitlist</title>
+  <meta name="description" content="Finder One. $199/year. Autopilot that switches your bills for you, plus members-only limited drops. Join the waitlist." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#08070c',
+            velvet: '#1a0b1f',
+            gold: '#e9c56b',
+            'gold-soft': '#f4e2b0',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          keyframes: {
+            shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+            floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+            pulseGlow: { '0%,100%': { opacity: '0.35' }, '50%': { opacity: '0.7' } },
+          },
+          animation: {
+            shimmer: 'shimmer 6s linear infinite',
+            floaty: 'floaty 6s ease-in-out infinite',
+            pulseGlow: 'pulseGlow 4s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    body { background-color: #08070c; }
+    .gold-text {
+      background: linear-gradient(100deg, #b8923f 0%, #f4e2b0 25%, #e9c56b 50%, #f8eec6 70%, #b8923f 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+    .velvet-grain {
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(120,40,90,0.35), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 10%, rgba(90,30,120,0.28), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 0% 30%, rgba(40,20,80,0.25), transparent 55%);
+    }
+    .card-gold-border { position: relative; }
+    .card-gold-border::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+      background: linear-gradient(140deg, rgba(233,197,107,0.6), rgba(233,197,107,0.05) 40%, rgba(233,197,107,0.05) 60%, rgba(233,197,107,0.4));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+    }
+    .rope-divider {
+      height: 2px;
+      background: repeating-linear-gradient(90deg, rgba(233,197,107,0.7) 0 14px, transparent 14px 26px);
+      opacity: 0.5;
+    }
+    .noise::after {
+      content:''; position:absolute; inset:0; pointer-events:none; opacity:0.04;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body class="font-sans text-white/80 antialiased selection:bg-gold/30">
+
+  <!-- Top ribbon -->
+  <div class="w-full bg-gradient-to-r from-velvet via-[#2a1030] to-velvet border-b border-gold/15 text-center text-[11px] sm:text-xs tracking-[0.25em] uppercase text-gold-soft/80 py-2.5">
+    <span class="animate-pulseGlow">◆ By invitation &amp; waitlist only · Next drop closes soon ◆</span>
+  </div>
+
+  <!-- Nav -->
+  <header class="relative z-20 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="h-9 w-9 rounded-full border border-gold/50 flex items-center justify-center">
+        <span class="font-display text-gold text-lg leading-none">1</span>
+      </div>
+      <span class="font-display text-xl tracking-wide text-white">Finder <span class="gold-text">One</span></span>
+    </div>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-white/60">
+      <a href="#drops" class="hover:text-gold transition">The Drops</a>
+      <a href="#autopilot" class="hover:text-gold transition">Autopilot</a>
+      <a href="#math" class="hover:text-gold transition">The Math</a>
+    </nav>
+    <a href="#join" class="text-xs sm:text-sm border border-gold/60 text-gold-soft px-4 py-2 rounded-full hover:bg-gold hover:text-ink transition font-medium tracking-wide">Request Access</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="velvet-grain noise relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink"></div>
+    <div class="relative max-w-7xl mx-auto px-6 pt-10 pb-24 lg:pt-16 lg:pb-32 grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left copy -->
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/5 backdrop-blur px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase text-gold-soft/90 mb-8">
+          <span class="h-1.5 w-1.5 rounded-full bg-gold animate-pulse"></span>
+          The velvet rope for your money
+        </div>
+
+        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-white">
+          The membership<br />that pays for<br /><span class="gold-text italic">itself on day one.</span>
+        </h1>
+
+        <p class="mt-8 text-lg text-white/60 max-w-md leading-relaxed">
+          <span class="text-white font-medium">Finder One</span> is $199 a year. Behind the rope:
+          <span class="text-gold-soft">members-only limited drops</span> worth more than the membership itself —
+          and <span class="text-gold-soft">Autopilot</span>, which switches your bills for you while you sleep.
+        </p>
+
+        <!-- FOMO drop teasers -->
+        <div class="mt-8 flex flex-wrap gap-2.5">
+          <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">🛒 50% off your Woolies shop</span>
+          <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">🎧 Free AirPods</span>
+          <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">⛽ Fuel cards</span>
+        </div>
+
+        <!-- Signup -->
+        <form id="join" class="mt-10 max-w-md" onsubmit="event.preventDefault(); document.getElementById('joined').classList.remove('hidden'); this.querySelector('button').textContent='You\'re on the list ✓';">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input required type="email" placeholder="you@email.com"
+              class="flex-1 bg-white/5 border border-white/15 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold/60 focus:ring-1 focus:ring-gold/40 transition" />
+            <button type="submit"
+              class="whitespace-nowrap bg-gradient-to-r from-gold to-gold-soft text-ink font-semibold px-7 py-4 rounded-xl hover:shadow-[0_0_40px_-8px_rgba(233,197,107,0.6)] transition">
+              Claim my spot
+            </button>
+          </div>
+          <p id="joined" class="hidden mt-3 text-sm text-gold-soft">✓ Saved. We'll open the rope for you before the public.</p>
+          <p class="mt-3 text-xs text-white/35">Waitlist members get priority access to every drop. No spam — just the drops.</p>
+        </form>
+
+        <!-- social proof -->
+        <div class="mt-8 flex items-center gap-4 text-sm text-white/50">
+          <div class="flex -space-x-2">
+            <span class="h-8 w-8 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border border-ink"></span>
+            <span class="h-8 w-8 rounded-full bg-gradient-to-br from-amber-300 to-orange-500 border border-ink"></span>
+            <span class="h-8 w-8 rounded-full bg-gradient-to-br from-emerald-300 to-teal-500 border border-ink"></span>
+            <span class="h-8 w-8 rounded-full bg-gradient-to-br from-sky-300 to-indigo-500 border border-ink"></span>
+          </div>
+          <span><span class="text-white font-semibold">12,480</span> already in line · last drop sold out in <span class="text-gold-soft">4 min</span></span>
+        </div>
+      </div>
+
+      <!-- Right: the drop card -->
+      <div class="relative">
+        <div class="absolute -inset-8 bg-gold/10 blur-3xl rounded-full animate-pulseGlow"></div>
+        <div class="card-gold-border relative rounded-3xl bg-gradient-to-b from-velvet/90 to-ink/95 p-8 animate-floaty shadow-2xl">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-[11px] tracking-[0.25em] uppercase text-gold-soft/70">Live Drop · #012</span>
+            <span class="flex items-center gap-1.5 text-xs text-red-300"><span class="h-2 w-2 rounded-full bg-red-400 animate-pulse"></span> Closing</span>
+          </div>
+
+          <h3 class="font-display text-3xl text-white">The Woolies Hack</h3>
+          <p class="mt-2 text-white/50 text-sm">50% off a full grocery shop. Members only.</p>
+
+          <!-- countdown -->
+          <div class="mt-6 grid grid-cols-4 gap-2 text-center" id="countdown">
+            <div class="rounded-xl bg-white/5 border border-white/10 py-3"><div class="font-display text-2xl text-gold" data-u="h">02</div><div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">hrs</div></div>
+            <div class="rounded-xl bg-white/5 border border-white/10 py-3"><div class="font-display text-2xl text-gold" data-u="m">41</div><div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">min</div></div>
+            <div class="rounded-xl bg-white/5 border border-white/10 py-3"><div class="font-display text-2xl text-gold" data-u="s">08</div><div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">sec</div></div>
+            <div class="rounded-xl bg-white/5 border border-white/10 py-3"><div class="font-display text-2xl text-gold-soft">37</div><div class="text-[10px] uppercase tracking-widest text-white/40 mt-1">left</div></div>
+          </div>
+
+          <!-- inventory bar -->
+          <div class="mt-6">
+            <div class="flex justify-between text-xs text-white/40 mb-2"><span>500 spots</span><span class="text-gold-soft">93% claimed</span></div>
+            <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+              <div class="h-full w-[93%] rounded-full bg-gradient-to-r from-gold to-gold-soft"></div>
+            </div>
+          </div>
+
+          <div class="mt-6 rope-divider"></div>
+
+          <div class="mt-6 flex items-center gap-3 text-sm text-white/50">
+            <span class="text-2xl">🔒</span>
+            <p>Unlocked only by <span class="text-white">Finder One</span> members. Join the waitlist for first access.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE LOCK / value prop strip -->
+  <section id="math" class="border-y border-white/5 bg-gradient-to-b from-ink to-velvet/40">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8 text-center">
+      <div>
+        <div class="font-display text-5xl gold-text">$199</div>
+        <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Your annual membership. One number, everything behind the rope.</p>
+      </div>
+      <div class="md:border-x border-white/5">
+        <div class="font-display text-5xl text-white">$300+</div>
+        <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Typical value of a <em>single</em> drop. The membership pays for itself before you've used it.</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-white">$1,200<span class="text-2xl text-white/40">/yr</span></div>
+        <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Average saved by Autopilot switching your bills — quietly, all year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DROPS GALLERY -->
+  <section id="drops" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-[11px] tracking-[0.3em] uppercase text-gold-soft/70 mb-4">Behind the rope</p>
+      <h2 class="font-display text-4xl sm:text-5xl text-white">Drops that sell out<br /><span class="gold-text italic">in minutes.</span></h2>
+      <p class="mt-5 text-white/50">Each drop is real, capped, and time-boxed. Miss the window and it's gone. Waitlist members get in first.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- card -->
+      <article class="card-gold-border rounded-2xl bg-white/[0.03] p-6 hover:bg-white/[0.06] transition group">
+        <div class="flex items-start justify-between">
+          <span class="text-4xl">🛒</span>
+          <span class="text-[10px] uppercase tracking-widest text-red-300 border border-red-400/30 rounded-full px-2 py-1">93% gone</span>
+        </div>
+        <h3 class="mt-5 font-display text-2xl text-white">The Woolies Hack</h3>
+        <p class="mt-2 text-sm text-white/50">50% off a full Woolworths or Coles grocery shop.</p>
+        <p class="mt-4 text-xs text-gold-soft">Worth up to $175 →</p>
+      </article>
+
+      <article class="card-gold-border rounded-2xl bg-white/[0.03] p-6 hover:bg-white/[0.06] transition group">
+        <div class="flex items-start justify-between">
+          <span class="text-4xl">🎧</span>
+          <span class="text-[10px] uppercase tracking-widest text-gold-soft border border-gold/30 rounded-full px-2 py-1">Hot</span>
+        </div>
+        <h3 class="mt-5 font-display text-2xl text-white">Free AirPods</h3>
+        <p class="mt-2 text-sm text-white/50">A brand-new pair, on the house, for members only.</p>
+        <p class="mt-4 text-xs text-gold-soft">Worth $219 →</p>
+      </article>
+
+      <article class="card-gold-border rounded-2xl bg-white/[0.03] p-6 hover:bg-white/[0.06] transition group">
+        <div class="flex items-start justify-between">
+          <span class="text-4xl">⛽</span>
+          <span class="text-[10px] uppercase tracking-widest text-white/40 border border-white/15 rounded-full px-2 py-1">Recurring</span>
+        </div>
+        <h3 class="mt-5 font-display text-2xl text-white">The Tank Filler</h3>
+        <p class="mt-2 text-sm text-white/50">Fuel cards for BP &amp; Ampol. Fill up on us.</p>
+        <p class="mt-4 text-xs text-gold-soft">Fuel credit →</p>
+      </article>
+
+      <article class="card-gold-border rounded-2xl bg-white/[0.03] p-6 hover:bg-white/[0.06] transition group">
+        <div class="flex items-start justify-between">
+          <span class="text-4xl">📺</span>
+          <span class="text-[10px] uppercase tracking-widest text-white/40 border border-white/15 rounded-full px-2 py-1">Bundle</span>
+        </div>
+        <h3 class="mt-5 font-display text-2xl text-white">The Binge Bundle</h3>
+        <p class="mt-2 text-sm text-white/50">12 months of Netflix + Spotify, sorted.</p>
+        <p class="mt-4 text-xs text-gold-soft">Worth $400+ →</p>
+      </article>
+
+      <article class="card-gold-border rounded-2xl bg-white/[0.03] p-6 hover:bg-white/[0.06] transition group">
+        <div class="flex items-start justify-between">
+          <span class="text-4xl">✈️</span>
+          <span class="text-[10px] uppercase tracking-widest text-white/40 border border-white/15 rounded-full px-2 py-1">Getaway</span>
+        </div>
+        <h3 class="mt-5 font-display text-2xl text-white">The Getaway</h3>
+        <p class="mt-2 text-sm text-white/50">Virgin &amp; Jetstar flight vouchers. Go somewhere.</p>
+        <p class="mt-4 text-xs text-gold-soft">Flight voucher →</p>
+      </article>
+
+      <article class="relative card-gold-border rounded-2xl bg-gradient-to-b from-gold/10 to-white/[0.03] p-6 overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="text-[11px] tracking-[0.3em] uppercase text-gold-soft/80">🔒 Unlocked for members</span>
+        </div>
+        <div class="opacity-20 blur-[2px]">
+          <span class="text-4xl">🎁</span>
+          <h3 class="mt-5 font-display text-2xl text-white">Drop #013</h3>
+          <p class="mt-2 text-sm text-white/50">The next one is already loaded. Join to see it first.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="mt-8 text-center text-xs text-white/30 max-w-2xl mx-auto">
+      Drops shown are illustrative of the kinds of rewards Finder One members receive. Availability, partners, quantities and value are limited and subject to change each cycle.
+    </p>
+  </section>
+
+  <!-- AUTOPILOT tease -->
+  <section id="autopilot" class="relative overflow-hidden border-t border-white/5">
+    <div class="velvet-grain absolute inset-0 opacity-60"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-[11px] tracking-[0.3em] uppercase text-gold-soft/70 mb-4">The quiet engine</p>
+        <h2 class="font-display text-4xl sm:text-5xl text-white leading-tight">
+          Meet <span class="gold-text italic">Autopilot.</span><br />Zero-click money switching.
+        </h2>
+        <p class="mt-6 text-white/55 text-lg max-w-md">
+          The drops win you over. Autopilot keeps you. Connect your inbox once and it finds every bill,
+          compares the market, and <span class="text-white">switches you to a better deal automatically</span> — one service a month, no forms, no calls, no clicks.
+        </p>
+        <ul class="mt-8 space-y-4 text-white/70">
+          <li class="flex gap-3"><span class="text-gold">✓</span> Scans your bills for savings the moment you join</li>
+          <li class="flex gap-3"><span class="text-gold">✓</span> Switches energy, broadband, insurance &amp; more — for you</li>
+          <li class="flex gap-3"><span class="text-gold">✓</span> You approve nothing per switch. It just happens.</li>
+        </ul>
+      </div>
+      <div class="card-gold-border rounded-3xl bg-ink/70 p-8">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
+            <div><div class="text-white text-sm">Energy · AGL → Origin</div><div class="text-xs text-white/40">Switched automatically</div></div>
+            <div class="text-gold-soft text-sm font-semibold">−$412/yr</div>
+          </div>
+          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
+            <div><div class="text-white text-sm">Broadband · Telstra → Superloop</div><div class="text-xs text-white/40">Switched automatically</div></div>
+            <div class="text-gold-soft text-sm font-semibold">−$360/yr</div>
+          </div>
+          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
+            <div><div class="text-white text-sm">Car insurance · under review</div><div class="text-xs text-white/40">Comparing 14 providers…</div></div>
+            <div class="text-white/40 text-sm">⟳</div>
+          </div>
+          <div class="rope-divider my-2"></div>
+          <div class="flex items-center justify-between px-1">
+            <span class="text-white/60 text-sm">Saved this year</span>
+            <span class="font-display text-2xl gold-text">$1,204</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="velvet-grain noise relative overflow-hidden border-t border-gold/10">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/60 to-ink"></div>
+    <div class="relative max-w-3xl mx-auto px-6 py-28 text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-gold/30 px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase text-gold-soft/90 mb-8">
+        <span class="h-1.5 w-1.5 rounded-full bg-gold animate-pulse"></span> The rope is closing
+      </div>
+      <h2 class="font-display text-5xl sm:text-6xl text-white leading-tight">
+        Don't watch the next drop<br /><span class="gold-text italic">sell out without you.</span>
+      </h2>
+      <p class="mt-6 text-white/55 text-lg max-w-xl mx-auto">
+        Waitlist members get first access to every Finder One drop — and lock in founding-member pricing before the public.
+      </p>
+
+      <form class="mt-10 max-w-md mx-auto" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You\'re on the list ✓'; this.querySelector('input').blur();">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input required type="email" placeholder="you@email.com"
+            class="flex-1 bg-white/5 border border-white/15 rounded-xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-gold/60 focus:ring-1 focus:ring-gold/40 transition" />
+          <button type="submit"
+            class="whitespace-nowrap bg-gradient-to-r from-gold to-gold-soft text-ink font-semibold px-7 py-4 rounded-xl hover:shadow-[0_0_40px_-8px_rgba(233,197,107,0.6)] transition">
+            Join the waitlist
+          </button>
+        </div>
+        <p class="mt-3 text-xs text-white/35">12,480 in line ahead of you. Priority access is first-come.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 bg-ink">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-white/40">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-full border border-gold/40 flex items-center justify-center"><span class="font-display text-gold">1</span></div>
+        <span class="font-display text-white/70">Finder One</span>
+      </div>
+      <p class="text-center text-xs max-w-md">
+        Finder One is a membership product concept. This page is a mockup for internal review — offers, values and availability are illustrative and not a binding promise.
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gold transition">Terms</a>
+        <a href="#" class="hover:text-gold transition">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Live-ish countdown for the hero drop card
+    (function () {
+      let total = 2 * 3600 + 41 * 60 + 8;
+      const h = document.querySelector('[data-u="h"]');
+      const m = document.querySelector('[data-u="m"]');
+      const s = document.querySelector('[data-u="s"]');
+      const pad = (n) => String(n).padStart(2, '0');
+      setInterval(function () {
+        if (total <= 0) total = 2 * 3600 + 41 * 60 + 8;
+        total--;
+        h.textContent = pad(Math.floor(total / 3600));
+        m.textContent = pad(Math.floor((total % 3600) / 60));
+        s.textContent = pad(total % 60);
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
