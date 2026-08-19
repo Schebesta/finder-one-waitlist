@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finder One — The Waitlist</title>
-  <meta name="description" content="Finder One. $199/year. Autopilot that switches your bills for you, plus members-only limited drops. Join the waitlist." />
+  <meta name="description" content="Finder One. $199/year. 20% extra cashback on every Finder Reward, plus members-only limited drops. Join the waitlist." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -12,7 +12,7 @@
         extend: {
           colors: {
             ink: '#08070c',
-            velvet: '#1a0b1f',
+            onyx: '#0d0d0d',
             gold: '#e9c56b',
             'gold-soft': '#f4e2b0',
           },
@@ -46,7 +46,7 @@
       -webkit-text-fill-color: transparent;
       animation: shimmer 6s linear infinite;
     }
-    .velvet-grain {
+    .onyx-grain {
       background-image:
         radial-gradient(ellipse 80% 50% at 50% -10%, rgba(120,40,90,0.35), transparent 60%),
         radial-gradient(ellipse 60% 40% at 100% 10%, rgba(90,30,120,0.28), transparent 55%),
@@ -73,7 +73,7 @@
 <body class="font-sans text-white/80 antialiased selection:bg-gold/30">
 
   <!-- Top ribbon -->
-  <div class="w-full bg-gradient-to-r from-velvet via-[#2a1030] to-velvet border-b border-gold/15 text-center text-[11px] sm:text-xs tracking-[0.25em] uppercase text-gold-soft/80 py-2.5">
+  <div class="w-full bg-gradient-to-r from-ink via-[#1a1a1a] to-ink border-b border-gold/15 text-center text-[11px] sm:text-xs tracking-[0.25em] uppercase text-gold-soft/80 py-2.5">
     <span class="animate-pulseGlow">◆ By invitation &amp; waitlist only · Next drop closes soon ◆</span>
   </div>
 
@@ -87,21 +87,21 @@
     </div>
     <nav class="hidden md:flex items-center gap-8 text-sm text-white/60">
       <a href="#drops" class="hover:text-gold transition">The Drops</a>
-      <a href="#autopilot" class="hover:text-gold transition">Autopilot</a>
+      <a href="#rewards-boost" class="hover:text-gold transition">The 20%</a>
       <a href="#math" class="hover:text-gold transition">The Math</a>
     </nav>
     <a href="#join" class="text-xs sm:text-sm border border-gold/60 text-gold-soft px-4 py-2 rounded-full hover:bg-gold hover:text-ink transition font-medium tracking-wide">Request Access</a>
   </header>
 
   <!-- HERO -->
-  <section class="velvet-grain noise relative overflow-hidden">
+  <section class="onyx-grain noise relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink"></div>
     <div class="relative max-w-7xl mx-auto px-6 pt-10 pb-24 lg:pt-16 lg:pb-32 grid lg:grid-cols-2 gap-16 items-center">
       <!-- Left copy -->
       <div>
         <div class="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/5 backdrop-blur px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase text-gold-soft/90 mb-8">
           <span class="h-1.5 w-1.5 rounded-full bg-gold animate-pulse"></span>
-          The velvet rope for your money
+          The gold rope for your money
         </div>
 
         <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-white">
@@ -109,13 +109,15 @@
         </h1>
 
         <p class="mt-8 text-lg text-white/60 max-w-md leading-relaxed">
-          <span class="text-white font-medium">Finder One</span> is $199 a year. Behind the rope:
-          <span class="text-gold-soft">members-only limited drops</span> worth more than the membership itself —
-          and <span class="text-gold-soft">Autopilot</span>, which switches your bills for you while you sleep.
+          <span class="text-white font-medium">Finder One</span> is $199 a year, and it does exactly two things.
+          <span class="text-gold-soft">An extra 20%</span> on every Finder Reward you already earn, and
+          <span class="text-gold-soft">members-only limited drops</span> worth more than the membership itself.
+          That's it — nothing else to read.
         </p>
 
         <!-- FOMO drop teasers -->
         <div class="mt-8 flex flex-wrap gap-2.5">
+          <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">💸 20% extra on Finder Rewards</span>
           <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">🛒 50% off your Woolies shop</span>
           <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">🎧 Free AirPods</span>
           <span class="rounded-full bg-white/5 border border-white/10 px-4 py-2 text-sm text-white/80">⛽ Fuel cards</span>
@@ -150,7 +152,7 @@
       <!-- Right: the drop card -->
       <div class="relative">
         <div class="absolute -inset-8 bg-gold/10 blur-3xl rounded-full animate-pulseGlow"></div>
-        <div class="card-gold-border relative rounded-3xl bg-gradient-to-b from-velvet/90 to-ink/95 p-8 animate-floaty shadow-2xl">
+        <div class="card-gold-border relative rounded-3xl bg-gradient-to-b from-onyx/90 to-ink/95 p-8 animate-floaty shadow-2xl">
           <div class="flex items-center justify-between mb-6">
             <span class="text-[11px] tracking-[0.25em] uppercase text-gold-soft/70">Live Drop · #012</span>
             <span class="flex items-center gap-1.5 text-xs text-red-300"><span class="h-2 w-2 rounded-full bg-red-400 animate-pulse"></span> Closing</span>
@@ -187,7 +189,7 @@
   </section>
 
   <!-- THE LOCK / value prop strip -->
-  <section id="math" class="border-y border-white/5 bg-gradient-to-b from-ink to-velvet/40">
+  <section id="math" class="border-y border-white/5 bg-gradient-to-b from-ink to-onyx/40">
     <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8 text-center">
       <div>
         <div class="font-display text-5xl gold-text">$199</div>
@@ -198,19 +200,9 @@
         <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Typical value of a <em>single</em> drop. The membership pays for itself before you've used it.</p>
       </div>
       <div>
-        <div class="font-display text-5xl text-white">$1,200<span class="text-2xl text-white/40">/yr</span></div>
-        <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Average saved by Autopilot switching your bills — quietly, all year.</p>
+        <div class="font-display text-5xl text-white">20%</div>
+        <p class="mt-3 text-white/50 text-sm max-w-xs mx-auto">Added to every Finder Reward you earn — automatically, on everything, with nothing to claim.</p>
       </div>
-
-    </div>
-    <!-- Savings Guarantee Banner -->
-    <div class="mt-12 max-w-4xl mx-auto border border-gold/30 bg-gold/5 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(233,197,107,0.1)]">
-      <h3 class="font-display text-2xl gold-text mb-2 flex items-center justify-center gap-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.956 11.956 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-        The Finder One Guarantee
-      </h3>
-      <p class="text-white/80 text-lg">We guarantee you'll save at least <strong>$300 a year</strong> or we'll refund your $199 membership fee. Zero risk.</p>
-    </div>
     </div>
   </section>
 
@@ -291,51 +283,8 @@
     </p>
   </section>
 
-  <!-- AUTOPILOT tease -->
-  <section id="autopilot" class="relative overflow-hidden border-t border-white/5">
-    <div class="velvet-grain absolute inset-0 opacity-60"></div>
-    <div class="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <p class="text-[11px] tracking-[0.3em] uppercase text-gold-soft/70 mb-4">The quiet engine</p>
-        <h2 class="font-display text-4xl sm:text-5xl text-white leading-tight">
-          Meet <span class="gold-text italic">Autopilot.</span><br />Zero-click money switching.
-        </h2>
-        <p class="mt-6 text-white/55 text-lg max-w-md">
-          The drops win you over. Autopilot keeps you. Connect your inbox once and it finds every bill,
-          compares the market, and <span class="text-white">switches you to a better deal automatically</span> — one service a month, no forms, no calls, no clicks.
-        </p>
-        <ul class="mt-8 space-y-4 text-white/70">
-          <li class="flex gap-3"><span class="text-gold">✓</span> Scans your bills for savings the moment you join</li>
-          <li class="flex gap-3"><span class="text-gold">✓</span> Switches energy, broadband, insurance &amp; more — for you</li>
-          <li class="flex gap-3"><span class="text-gold">✓</span> You approve nothing per switch. It just happens.</li>
-        </ul>
-      </div>
-      <div class="card-gold-border rounded-3xl bg-ink/70 p-8">
-        <div class="space-y-4">
-          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
-            <div><div class="text-white text-sm">Energy · AGL → Origin</div><div class="text-xs text-white/40">Switched automatically</div></div>
-            <div class="text-gold-soft text-sm font-semibold">−$412/yr</div>
-          </div>
-          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
-            <div><div class="text-white text-sm">Broadband · Telstra → Superloop</div><div class="text-xs text-white/40">Switched automatically</div></div>
-            <div class="text-gold-soft text-sm font-semibold">−$360/yr</div>
-          </div>
-          <div class="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 p-4">
-            <div><div class="text-white text-sm">Car insurance · under review</div><div class="text-xs text-white/40">Comparing 14 providers…</div></div>
-            <div class="text-white/40 text-sm">⟳</div>
-          </div>
-          <div class="rope-divider my-2"></div>
-          <div class="flex items-center justify-between px-1">
-            <span class="text-white/60 text-sm">Saved this year</span>
-            <span class="font-display text-2xl gold-text">$1,204</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FINAL CTA -->
-  <section class="velvet-grain noise relative overflow-hidden border-t border-gold/10">
+  <section class="onyx-grain noise relative overflow-hidden border-t border-gold/10">
     <div class="absolute inset-0 bg-gradient-to-b from-ink/60 to-ink"></div>
     <div class="relative max-w-3xl mx-auto px-6 py-28 text-center">
       <div class="inline-flex items-center gap-2 rounded-full border border-gold/30 px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase text-gold-soft/90 mb-8">
@@ -359,6 +308,87 @@
         </div>
         <p class="mt-3 text-xs text-white/35">12,480 in line ahead of you. Priority access is first-come.</p>
       </form>
+    </div>
+  </section>
+
+  <section id="rewards-boost" class="bg-ink text-white py-24 px-6 lg:px-8 relative overflow-hidden border-t border-white/5">
+    <!-- Subtle Ambient Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 blur-[120px] rounded-full pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        
+        <!-- The Narrative / Fable -->
+        <div class="max-w-2xl">
+          <p class="text-[11px] tracking-[0.3em] uppercase text-gold-soft/70 mb-4">The Wealth Multiplier</p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-8">
+            The Tale of <br />
+            <span class="gold-text italic">The Left-Behind Wealth.</span>
+          </h2>
+          <div class="space-y-6 text-lg text-white/60 font-light leading-relaxed">
+            <p>
+              Imagine booking the exact same flights, paying the same bills, and buying the exact same morning coffee as the person next to you. Over the year, you both accumulate the exact same amount of standard cashback.
+            </p>
+            <p>
+              But while they settle for the standard payout, your rewards are quietly intercepted and amplified. Every single dollar you earn in Finder Rewards is instantly boosted by a guaranteed <span class="text-gold-soft font-semibold">20%</span>.
+            </p>
+            <p>
+              No extra spending. No shifting your habits. Just an automatic, frictionless wealth multiplier running quietly in the background.
+            </p>
+            <p class="pt-4 font-medium text-white text-xl">
+              That is the quiet power of Finder One.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Math (Scenario) -->
+        <div class="relative">
+          <div class="absolute -inset-1 bg-gradient-to-b from-white/10 to-transparent rounded-3xl blur-sm opacity-50"></div>
+          
+          <div class="relative bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md shadow-2xl">
+            <div class="flex items-center justify-between mb-10 pb-6 border-b border-white/10">
+              <h3 class="font-display text-2xl font-semibold text-white tracking-tight">The No-Brainer Math</h3>
+              <span class="bg-white/10 text-gold-soft text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Scenario</span>
+            </div>
+
+            <div class="space-y-8">
+              <!-- Without Finder One -->
+              <div class="group relative">
+                <div class="flex justify-between items-end opacity-60">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-white/40 mb-1">Without Finder One</p>
+                    <p class="text-sm text-white/50">Standard Annual Rewards</p>
+                  </div>
+                  <div class="text-3xl font-display font-bold text-white/40">$1,000</div>
+                </div>
+              </div>
+
+              <!-- With Finder One -->
+              <div class="relative bg-black/40 -mx-6 px-6 py-8 rounded-2xl border border-white/5 shadow-inner">
+                <div class="flex justify-between items-end">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider gold-text mb-1">With Finder One</p>
+                    <p class="text-sm text-white/80">Standard Rewards + <span class="text-gold-soft font-semibold">20% Boost</span></p>
+                  </div>
+                  <div class="text-4xl font-display font-bold text-white">$1,200</div>
+                </div>
+                
+                <!-- ROI Indicator -->
+                <div class="mt-8 flex items-center justify-between bg-white/5 border border-white/10 rounded-xl p-4">
+                  <span class="text-sm text-white/70 font-medium">Extra Value Unlocked</span>
+                  <span class="text-xl font-bold text-gold-soft">+$200 pure profit</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-10 text-center">
+              <p class="text-sm text-white/40 italic">"Why leave 20% on the table when you don't have to?"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
